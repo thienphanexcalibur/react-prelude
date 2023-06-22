@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.tsx",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
+    "esbuild": "^0.18.6",
+    "lerna": "^7.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.3"
+  },
+  "scripts": {
+    "build": "lerna run build,build:types",
+    "dev": "lerna run build:types,dev",
+    "publish": "lerna publish from-package"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "framer-motion": "^10.12.16"
+  }
+}
