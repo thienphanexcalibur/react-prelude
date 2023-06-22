@@ -20,7 +20,8 @@
   "scripts": {
     "build": "lerna run build,build:types",
     "dev": "lerna run build:types,dev",
-    "publish": "lerna publish from-package"
+    "publish": "lerna publish from-package",
+    "bump": "lerna version --conventional-commits --create-release"
   },
   "browserslist": [
     ">0.2%",
