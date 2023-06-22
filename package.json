@@ -21,7 +21,7 @@
     "build": "lerna run build,build:types",
     "dev": "lerna run build:types,dev",
     "publish": "lerna publish from-package",
-    "bump": "lerna version --conventional-commits --create-release"
+    "bump": "GH_TOKEN=$(echo release-token); lerna version --conventional-commits --create-release=github"
   },
   "browserslist": [
     ">0.2%",
