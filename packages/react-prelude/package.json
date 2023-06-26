@@ -21,7 +21,7 @@
   "scripts": {
     "test": "node ./__tests__/onboarding.test.js",
     "dev": "esbuild ./lib/index.ts --bundle --outdir=dist --platform=browser --sourcemap --watch",
-    "build": "esbuild ./lib/index.ts  --bundle --outdir=dist --analyze --external:react --external:react-dom --minify --platform=browser",
+    "build": "esbuild ./lib/index.ts  --bundle --outdir=dist --analyze --jsx=automatic --external:react --external:react-dom --minify --platform=browser",
     "build:types": "tsc"
   },
   "bugs": {
