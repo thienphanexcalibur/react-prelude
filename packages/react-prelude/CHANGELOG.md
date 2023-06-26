@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.5...v1.1.6) (2023-06-26)
+
+
+### Bug Fixes
+
+* react-shim ([91dc3d6](https://github.com/thienphanexcalibur/react-prelude/commit/91dc3d6c2407c7ca1f79d363b510fd12923a2fe0))
+
+
+
+
+
 ## [1.1.5](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.4...v1.1.5) (2023-06-26)
 
 
