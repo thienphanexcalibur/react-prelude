@@ -5,7 +5,7 @@
   "author": "thienphanexcalibur <thienkphan@gmail.com>",
   "homepage": "https://github.com/thienphanexcalibur/react-prelude#readme",
   "license": "ISC",
-  "main": "lib/index.ts",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "directories": {
     "lib": "lib"
@@ -22,7 +22,9 @@
     "test": "node ./__tests__/onboarding.test.js",
     "dev": "esbuild ./lib/index.ts --bundle --outdir=dist --platform=browser --sourcemap --watch",
     "build": "esbuild ./lib/index.ts  --bundle --outdir=dist --analyze --inject:./react-shim.js --external:react --external:react-dom --minify --platform=browser",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
   "bugs": {
     "url": "https://github.com/thienphanexcalibur/react-prelude/issues"
@@ -33,5 +35,8 @@
     "framer-motion": "^10.12.17",
     "nanoid": "^4.0.2"
   },
-  "gitHead": "036f8de1514951a63e861222678e6b13e48975b0"
+  "gitHead": "036f8de1514951a63e861222678e6b13e48975b0",
+  "devDependencies": {
+    "clean-package": "^2.2.0"
+  }
 }
