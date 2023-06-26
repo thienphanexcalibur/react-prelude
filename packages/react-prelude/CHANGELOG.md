@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.3...v1.1.4) (2023-06-26)
+
+
+### Bug Fixes
+
+* add jsx argument to build command ([2f5effa](https://github.com/thienphanexcalibur/react-prelude/commit/2f5effa8f97680a209b1cbb9ddc6102a48bc368e))
+
+
+
+
+
 ## [1.1.3](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.2...v1.1.3) (2023-06-26)
 
 
