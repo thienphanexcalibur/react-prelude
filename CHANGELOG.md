@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.4...v1.1.5) (2023-06-26)
+
+
+### Bug Fixes
+
+* publish command ([6cdcf18](https://github.com/thienphanexcalibur/react-prelude/commit/6cdcf181ffe95e1a8a007b1119280e77efd87c5b))
+
+
+
+
+
 ## [1.1.4](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.3...v1.1.4) (2023-06-26)
 
 
