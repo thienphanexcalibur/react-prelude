@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.2...v1.1.3) (2023-06-26)
+
+
+### Bug Fixes
+
+* add framer-motion as dep ([48d817b](https://github.com/thienphanexcalibur/react-prelude/commit/48d817bc424ff6977b017b1c900862f7c54edd3a))
+
+
+
+
+
 ## [1.1.2](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.1...v1.1.2) (2023-06-22)
 
 **Note:** Version bump only for package react-prelude
