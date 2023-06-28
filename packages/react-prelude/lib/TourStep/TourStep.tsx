@@ -29,7 +29,7 @@ export default function TourStep({
   tourContent,
 }: TourStepProps) {
   const tourRef = useRef(null);
-  const id = useMemo(() => nanoid(4), []);
+  const id = useMemo(() => crypto.randomUUID(), []);
   const currentStepId = steps.value[currentStepIndex.value]?.id;
   const canShow = currentStepId === id && _start.value;
 

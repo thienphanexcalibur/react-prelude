@@ -65,7 +65,6 @@ function App() {
         </Box>
       </TourStep>
       <Heading textAlign="center">
-        <TourController />
         <Button onClick={startTour}>Start tour</Button>
       </Heading>
     </Center>
@@ -77,6 +76,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <ChakraProvider>
+    <TourController />
     <App />
   </ChakraProvider>
 );

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
     "jsx": "react-jsx",
+    "esModuleInterop": false,
     "declaration": true,
     "emitDeclarationOnly": true,
     "skipLibCheck": true,
