@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.9...v1.1.10) (2023-07-13)
+
+
+### Bug Fixes
+
+* build ([667ab70](https://github.com/thienphanexcalibur/react-prelude/commit/667ab707b6b441c58772b720270bce45999a3ad2))
+
+
+
+
+
 ## [1.1.9](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.8...v1.1.9) (2023-06-28)
 
 **Note:** Version bump only for package react-prelude
