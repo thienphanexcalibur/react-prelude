@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "lerna run build,build:types",
-    "dev": "lerna run build:types,dev",
+    "dev": "lerna run dev",
     "publish": "yarn build && lerna publish from-package",
     "bump": "GH_TOKEN=$(cat release-token); lerna version --conventional-commits --create-release=github"
   },

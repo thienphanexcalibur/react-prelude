@@ -7,7 +7,6 @@ import {
   ReactElement,
 } from "react";
 import { addTourStep } from "../actions";
-import { nanoid } from "nanoid";
 
 import {
   FloatingPortal,
@@ -29,7 +28,7 @@ export default function TourStep({
   tourContent,
 }: TourStepProps) {
   const tourRef = useRef(null);
-  const id = useMemo(() => crypto.randomUUID(), []);
+  const id = useMemo(() => window.crypto["randomUUID"](), []);
   const currentStepId = steps.value[currentStepIndex.value]?.id;
   const canShow = currentStepId === id && _start.value;
 

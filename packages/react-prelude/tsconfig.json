@@ -1,6 +1,8 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outFile": "dist/types/index.d.ts"
+    "outDir": "dist/types",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

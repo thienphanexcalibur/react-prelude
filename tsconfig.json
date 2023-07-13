@@ -5,8 +5,7 @@
     "esModuleInterop": false,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "skipLibCheck": true,
-    "declarationMap": true
+    "skipLibCheck": true
   },
   "exclude": ["**/node_modules", "**/dist/**/*.d.ts", "dist"]
 }
