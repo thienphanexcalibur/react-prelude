@@ -13,19 +13,24 @@ import {
   offset,
   useFloating,
   autoUpdate,
+  shift,
+  type Placement,
 } from "@floating-ui/react";
 import { currentStepIndex, steps, _start } from "../state";
+import autoPlaceOverflow from '../middleware/autoPlaceOverflow'
 
 interface TourStepProps {
   order: number;
   children: ReactElement;
   tourContent?: ReactNode;
+  placement?: Placement
 }
 
 export default function TourStep({
   order,
   children,
   tourContent,
+  placement,
 }: TourStepProps) {
   const tourRef = useRef(null);
   const id = useMemo(() => window.crypto["randomUUID"](), []);
@@ -34,8 +39,9 @@ export default function TourStep({
 
   const { refs, floatingStyles } = useFloating({
     open: canShow,
-    middleware: [offset(10)],
+    middleware: [offset(10), shift({ padding: 5 }), autoPlaceOverflow()],
     whileElementsMounted: autoUpdate,
+    placement,
   });
 
   useLayoutEffect(() => {
@@ -44,7 +50,7 @@ export default function TourStep({
 
   return (
     <>
-      <div className="tour-step" ref={tourRef}>
+      <div className="tour-step" style={{ width: 'fit-content' }} ref={tourRef}>
         {cloneElement(children, {
           ref: refs.setReference,
         })}
