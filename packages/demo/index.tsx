@@ -51,7 +51,7 @@ const TourContent = () => {
 function App() {
   return (
     <Center width="100vw" height="100vh" flexDir="column">
-      <TourStep order={1} tourContent={<TourContent />}>
+      <TourStep order={1} tourContent={<TourContent />} placement="left">
         <Box className="tour1">First Tour</Box>
       </TourStep>
 
