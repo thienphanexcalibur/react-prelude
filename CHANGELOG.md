@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.10...v1.3.0) (2024-07-01)
+
+
+### Features
+
+* add transition when overlay change position ([361ad42](https://github.com/thienphanexcalibur/react-prelude/commit/361ad42482a74ccb7032b2122253b0dbb3c8238b))
+
+
+
+
+
 # [1.2.0](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.10...v1.2.0) (2024-07-01)
 
 
