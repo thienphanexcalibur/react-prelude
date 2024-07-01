@@ -50,24 +50,29 @@ const TourContent = () => {
 
 function App() {
   return (
-    <Center width="100vw" height="100vh" flexDir="column">
-      <TourStep order={1} tourContent={<TourContent />}>
-        <Box className="tour1">First Tour</Box>
-      </TourStep>
+    <>
+      <Box position="fixed" right={20} top={20}>
+        <Box>Current Steps: {currentStepIndex.value}</Box>
+      </Box>
+      <>
+        <TourStep order={1} tourContent={<TourContent />}>
+          <Box className="tour1" width="300px">First Tour</Box>
+        </TourStep>
 
-      <TourStep order={2} tourContent={<TourContent />}>
-        <Box className="tour2">
-          Second Tour
-          <Image
-            src="https://images.ctfassets.net/q5ulk4bp65r7/3GXsKOhU34b8g8FYMf2Y6x/991f9abe5d7fc74b662095a6ac20c17e/Learn_Illustration_What_is_a_Crypto_Wallet.jpg"
-            width="300px"
-          />
-        </Box>
-      </TourStep>
-      <Heading textAlign="center">
-        <Button onClick={startTour}>Start tour</Button>
-      </Heading>
-    </Center>
+        <TourStep order={2} tourContent={<TourContent />}>
+          <Box className="tour2" width="200px">
+            Second Tour
+            <Image
+              src="https://images.ctfassets.net/q5ulk4bp65r7/3GXsKOhU34b8g8FYMf2Y6x/991f9abe5d7fc74b662095a6ac20c17e/Learn_Illustration_What_is_a_Crypto_Wallet.jpg"
+              width="300px"
+            />
+          </Box>
+        </TourStep>
+        <Heading textAlign="center">
+          <Button onClick={startTour}>Start tour</Button>
+        </Heading>
+      </>
+    </>
   );
 }
 

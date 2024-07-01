@@ -13,6 +13,9 @@ import {
   offset,
   useFloating,
   autoUpdate,
+  autoPlacement,
+  useTransitionStyles,
+  FloatingOverlay,
 } from "@floating-ui/react";
 import { currentStepIndex, steps, _start } from "../state";
 
@@ -32,10 +35,23 @@ export default function TourStep({
   const currentStepId = steps.value[currentStepIndex.value]?.id;
   const canShow = currentStepId === id && _start.value;
 
-  const { refs, floatingStyles } = useFloating({
+  const { refs, floatingStyles, context } = useFloating({
     open: canShow,
-    middleware: [offset(10)],
+    middleware: [offset(10), autoPlacement()],
     whileElementsMounted: autoUpdate,
+  });
+
+  const { isMounted, styles } = useTransitionStyles(context, {
+    initial: {
+      opacity: 0,
+    },
+    open: {
+      opacity: 1,
+      zIndex: 99999999,
+    },
+    close: {
+      opacity: 0,
+    },
   });
 
   useLayoutEffect(() => {
@@ -44,21 +60,24 @@ export default function TourStep({
 
   return (
     <>
-      <div className="tour-step" ref={tourRef}>
+      <div className="tour-step" style={{ width: "fit-content" }} ref={tourRef}>
         {cloneElement(children, {
           ref: refs.setReference,
         })}
       </div>
 
-      {canShow && tourContent && (
-        <FloatingPortal>
-          <div
-            ref={refs.setFloating}
-            style={{ ...floatingStyles, zIndex: 99999999 }}
-          >
-            {tourContent}
-          </div>
-        </FloatingPortal>
+      {isMounted && (
+        <>
+          <FloatingPortal>
+            <FloatingOverlay />
+            <div
+              ref={refs.setFloating}
+              style={{ ...floatingStyles, ...styles }}
+            >
+              {tourContent}
+            </div>
+          </FloatingPortal>
+        </>
       )}
     </>
   );
