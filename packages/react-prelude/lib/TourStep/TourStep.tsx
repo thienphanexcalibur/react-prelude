@@ -16,6 +16,7 @@ import {
   autoPlacement,
   useTransitionStyles,
   FloatingOverlay,
+  shift,
 } from "@floating-ui/react";
 import { currentStepIndex, steps, _start } from "../state";
 
@@ -36,8 +37,14 @@ export default function TourStep({
   const canShow = currentStepId === id && _start.value;
 
   const { refs, floatingStyles, context } = useFloating({
+    strategy: "fixed",
     open: canShow,
-    middleware: [offset(10), autoPlacement()],
+    middleware: [
+      offset(10),
+      autoPlacement({
+        alignment: "end",
+      }),
+    ],
     whileElementsMounted: autoUpdate,
   });
 
@@ -47,7 +54,6 @@ export default function TourStep({
     },
     open: {
       opacity: 1,
-      zIndex: 99999999,
     },
     close: {
       opacity: 0,
@@ -69,12 +75,16 @@ export default function TourStep({
       {isMounted && (
         <>
           <FloatingPortal>
-            <FloatingOverlay />
             <div
               ref={refs.setFloating}
-              style={{ ...floatingStyles, ...styles }}
+              style={{ ...floatingStyles, zIndex: 9999999 }}
             >
-              {tourContent}
+              <div
+                // ref={refs.setFloating}
+                style={styles}
+              >
+                {tourContent}
+              </div>
             </div>
           </FloatingPortal>
         </>

@@ -20,6 +20,7 @@ export default function TourOverlay() {
   const [isOpen, setIsOpen] = useState(false);
   const { refs, context, floatingStyles } = useFloating({
     open: isOpen,
+    strategy: 'fixed',
     // onOpenChange: setIsOpen,
     elements: {
       reference: currentTourTarget.value,
@@ -65,7 +66,6 @@ export default function TourOverlay() {
       opacity: 0,
     },
   });
-
 
   return (
     <>
