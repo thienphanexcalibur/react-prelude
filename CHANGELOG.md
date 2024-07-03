@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/thienphanexcalibur/react-prelude/compare/v1.3.0...v1.3.1) (2024-07-03)
+
+
+### Bug Fixes
+
+* TourStep out of bound viewport ([e8b7bc9](https://github.com/thienphanexcalibur/react-prelude/commit/e8b7bc9daf521a25adb6623afea22588cbd41df1))
+
+
+
+
+
 # [1.3.0](https://github.com/thienphanexcalibur/react-prelude/compare/v1.1.10...v1.3.0) (2024-07-01)
 
 
