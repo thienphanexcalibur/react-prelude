@@ -14,18 +14,31 @@
     "url": "git+https://github.com/thienphanexcalibur/react-prelude.git"
   },
   "scripts": {
-    "test": "node ./__tests__/demo.test.js",
-    "dev": "vite"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "bugs": {
     "url": "https://github.com/thienphanexcalibur/react-prelude/issues"
   },
   "devDependencies": {
+    "@types/node": "^20.14.10",
+    "autoprefixer": "^10.4.19",
+    "next": "^14.2.4",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
     "vite": "^4.3.9"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.7.1",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0"
+    "@radix-ui/react-slot": "^1.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.403.0",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
